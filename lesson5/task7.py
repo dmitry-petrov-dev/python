@@ -33,9 +33,6 @@ try:
         if comp_counter == 0:
             comp_counter = 1
     output_list = [comp_dict, {"average_profit": int(total_profit / comp_counter)}]
-    print(output_list)
-
-    print(json.dumps(output_list, ensure_ascii=False).encode('utf-8'))
     with open("text_result_7.json", "w", encoding='utf-8') as json_file:
         json.dump(output_list, json_file, ensure_ascii=False, sort_keys=True, indent=4)
 except FileNotFoundError:
